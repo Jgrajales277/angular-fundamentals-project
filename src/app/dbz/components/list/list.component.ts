@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, EventEmitter, Output } from '@angular/core';
 import { Character } from '../../interfaces/character.interface';
 
 @Component({
@@ -8,7 +8,25 @@ import { Character } from '../../interfaces/character.interface';
 })
 export class ListComponent {
 
-  @Input()
-  public characterList: Character[] = []
 
-}
+  @Input()
+  public characterList: Character[] = [{
+    name: 'Trunks',
+    power: 10
+  }]
+
+
+  @Output()
+  public onDelete: EventEmitter<number>= new EventEmitter();
+    //Another syntax for declaring the event abov e is:
+    // public onDelete: new EventEmitter<number></number>
+
+    onDeleteCharacter(index: number): void {
+      //TODO: Emit the character ID
+      this.onDelete.emit(index);
+
+
+    };
+
+
+  }

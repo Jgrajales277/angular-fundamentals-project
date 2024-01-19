@@ -11,6 +11,7 @@ import { AddCharacterComponent } from './components/add-character/add-character.
     MainPageComponent,
     ListComponent,
     AddCharacterComponent
+
   ],
   exports: [
     MainPageComponent
