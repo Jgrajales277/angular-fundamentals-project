@@ -18,7 +18,7 @@ export class ListComponent {
 
   @Output()
   public onDelete: EventEmitter<number>= new EventEmitter();
-    //Another syntax for declaring the event abov e is:
+    //Another syntax for declaring the event above is:
     // public onDelete: new EventEmitter<number></number>
 
     onDeleteCharacter(index: number): void {
